@@ -24,5 +24,7 @@
     <color name="theme_accent">#04561A</color>
     <color name="ltgray">#ffe0e0e0</color>
     <color name="lt_item_title">#000000</color>
+    <color name="lt_detail_item_title">#ffffff</color>
+    <color name="lt_detail_item_title2">#F5F5F5</color>
     <color name="lt_item_subtitle">#686868</color>
 </resources>
