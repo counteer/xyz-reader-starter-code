@@ -61,9 +61,9 @@ public class ArticleDetailActivity extends ActionBarActivity
             @Override
             public void onPageScrollStateChanged(int state) {
                 super.onPageScrollStateChanged(state);
-                mUpButton.animate()
-                        .alpha((state == ViewPager.SCROLL_STATE_IDLE) ? 1f : 0f)
-                        .setDuration(300);
+//                mUpButton.animate()
+//                        .alpha((state == ViewPager.SCROLL_STATE_IDLE) ? 1f : 0f)
+//                        .setDuration(300);
             }
 
             @Override
@@ -92,8 +92,8 @@ public class ArticleDetailActivity extends ActionBarActivity
                 public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
                     view.onApplyWindowInsets(windowInsets);
                     mTopInset = windowInsets.getSystemWindowInsetTop();
-                    mUpButtonContainer.setTranslationY(mTopInset);
-                    updateUpButtonPosition();
+                    //mUpButtonContainer.setTranslationY(mTopInset);
+                    //updateUpButtonPosition();
                     return windowInsets;
                 }
             });
@@ -142,13 +142,13 @@ public class ArticleDetailActivity extends ActionBarActivity
     public void onUpButtonFloorChanged(long itemId, ArticleDetailFragment fragment) {
         if (itemId == mSelectedItemId) {
             mSelectedItemUpButtonFloor = fragment.getUpButtonFloor();
-            updateUpButtonPosition();
+            //updateUpButtonPosition();
         }
     }
 
     private void updateUpButtonPosition() {
-        int upButtonNormalBottom = mTopInset + mUpButton.getHeight();
-        mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
+    //    int upButtonNormalBottom = mTopInset + mUpButton.getHeight();
+      //  mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
     }
 
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
