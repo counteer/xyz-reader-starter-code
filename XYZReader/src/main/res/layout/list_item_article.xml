@@ -1,4 +1,5 @@
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,19 +9,21 @@
     android:layout_marginBottom="4dp"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="?selectableItemBackground">
+    style="@style/Theme.Bacon.Detail">
 
     <LinearLayout
+        android:background="@color/background_sub"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        style="@style/Theme.Bacon">
 
         <!--suppress AndroidLintContentDescription -->
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/photo_placeholder"
             android:layout_gravity="center_vertical"
             />
     <LinearLayout
@@ -29,28 +32,28 @@
         android:orientation="vertical">
         <TextView
             android:id="@+id/article_title"
-            style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="4dp"
-            android:textColor="@color/lt_item_title"
             android:ellipsize="end"
-            android:maxLines="4" />
+            android:maxLines="4"
+            android:textSize="22dp"
+            android:text="Title"/>
 
         <TextView
             android:id="@+id/article_subtitle"
-            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
-            android:textColor="@color/lt_item_subtitle"
             android:maxLines="2"
-            android:ellipsize="end" />
+            android:ellipsize="end"
+            android:textSize="16dp"
+            android:text="SubTitle"/>
     </LinearLayout>
     </LinearLayout>
 
